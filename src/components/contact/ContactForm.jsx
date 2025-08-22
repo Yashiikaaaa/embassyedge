@@ -89,11 +89,11 @@ const ContactForm = ({ contactmodal, setContactModal, leadSource }) => {
     return true;
   };
 
-  const handleSubmit = async (e) => {
+const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (loading) return;
-    setLoading(true);
+    if (loading) return; // Avoid duplicate submission if already submitting
+    setLoading(true); // Set the loading state to true
 
     if (!validateForm()) {
       setLoading(false);
@@ -158,9 +158,10 @@ const ContactForm = ({ contactmodal, setContactModal, leadSource }) => {
         />
       );
     } finally {
-      setTimeout(() => setLoading(false), 1000);
+      setTimeout(() => setLoading(false), 1000); // Ensure loading is reset after a while
     }
-  };
+};
+
 
   return (
     <div>

@@ -90,8 +90,9 @@ export const useLeadTracking = () => {
 export const LEAD_SOURCES = {
   HERO: "hero_banner",
   OVERVIEW: "overview_section",
-  PRICING_sqft2400: "pricing_2400_sq.ft",
-  PRICING_sqft4000: "pricing_4000_sq.ft",
+  PRICING_2BHK: "pricing_2BHK",
+  PRICING_3BHK: "pricing_3BHK",
+  PRICING_4BHK: "pricing_4BHK",
   MASTER_PLAN: "master_plan_section",
   FOOTER: "footer_section",
   CONTACT_FORM_LINK: "contact_form_internal_link",
@@ -100,6 +101,7 @@ export const LEAD_SOURCES = {
 
 // Property types
 export const PROPERTY_TYPES = {
-  sqft2400: "2400 sq.ft",
-  sqft4000: "4000 sq.ft",
+  BHK2: "2BHK",
+  BHK3: "3BHK",
+  BHK4: "4BHK"
 };
