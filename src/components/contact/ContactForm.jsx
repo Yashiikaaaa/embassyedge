@@ -115,7 +115,7 @@ const handleSubmit = async (e) => {
       phoneNumber: number.trim(),
       campaign: true,
       projectId: "PL37",
-      projectName: "Embassy Edge",
+      projectName: "Embassy Green Shore",
       currentAgent: "shaun@truestate.in",
       utmDetails: {
         source: utmParams.utmSource || null,
