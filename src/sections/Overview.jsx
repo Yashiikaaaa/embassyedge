@@ -20,7 +20,7 @@ export const Overview = ({ openContactModal }) => {
           <p className="max-w-2xl md:text-base text-sm text-black font-body font-light">
           <span className="font-body font-bold text-xs md:text-lg ">
         
-Embassy Edge at Embassy Springs is where life moves
+Embassy Green Shore at Embassy Springs is where life moves
 smarter, simpler, and beautifully. 
          </span>
           <br />
