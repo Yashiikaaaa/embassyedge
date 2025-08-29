@@ -233,9 +233,9 @@ const handleSubmit = async (e) => {
               </div>
               <div className="mx-auto max-w-sm w-full">
                 <button className="text-white my-5 p-2 w-full bg-PrestigeBrown flex items-center justify-center hover:bg-opacity-90 transition">
-                  <a href="tel:+916364254487" className="flex items-center">
+                  <a href="tel:+918919456501" className="flex items-center">
                     <Phone className="w-5 h-5 mr-2" />
-                   63642 54487
+                   89194 56501
                   </a>
                 </button>
               </div>
