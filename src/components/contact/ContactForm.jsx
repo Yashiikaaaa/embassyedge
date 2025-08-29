@@ -126,7 +126,7 @@ const handleSubmit = async (e) => {
 
     try {
       const response = await fetch(
-        "https://googleleadsserver.onrender.com/handleMultipleCampaignData",
+        "https://google-campaign-leads-service-dot-iqol-crm.uc.r.appspot.com/handleMultipleCampaignData",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
