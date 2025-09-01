@@ -18,6 +18,7 @@ const getUTMParams = () => {
     utm_source: getParam(["utm_source", "utmSource"]),
     utm_medium: getParam(["utm_medium", "utmMedium"]),
     utm_campaign: getParam(["utm_campaign", "utmCampaign"]),
+    utm_campaign: getParam(["utm_keyword", "utmKeyword"]),
     utm_term: getParam(["utm_term", "utmTerm"]),
     utm_content: getParam(["utm_content", "utmContent"]),
   };
