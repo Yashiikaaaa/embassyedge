@@ -121,6 +121,7 @@ const handleSubmit = async (e) => {
         source: utmParams.utmSource || null,
         medium: utmParams.utmMedium || null,
         campaign: utmParams.utmCampaign || null,
+        keyword: utmParams.utmKeyword || null,
       },
     };
 
