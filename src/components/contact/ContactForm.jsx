@@ -39,14 +39,16 @@ const ContactForm = ({ contactmodal, setContactModal, leadSource }) => {
 
   function getUTMParams() {
     const params = new URLSearchParams(window.location.search);
-    const source = params.get("utmsource");
+    const source = params.get("utmSource");
     const medium = params.get("utmMedium");
     const campaign = params.get("utmCampaign");
+    const keyword = params.get("utmKeyword");
 
     return {
       utmSource: source || "",
       utmMedium: medium || "",
       utmCampaign: campaign || "",
+      utmKeyword: keyword || "",
     };
   }
 
