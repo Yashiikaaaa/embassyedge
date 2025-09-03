@@ -230,9 +230,9 @@ const ContactForm = ({ contactmodal, setContactModal, leadSource }) => {
                 <button
                   onClick={handleSubmit}
                   className={`text-white my-5 p-2 w-full ${
-                    loading ? "bg-gray-400" : "bg-PrestigeBrown"
+                    loading || !isFormValid ? "bg-gray-400 cursor-not-allowed" : "bg-PrestigeBrown"
                   }`}
-                  disabled={loading}
+                  disabled={loading || !isFormValid}
                 >
                   {loading ? "Submitting..." : "Submit"}
                 </button>
