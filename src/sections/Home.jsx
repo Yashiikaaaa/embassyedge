@@ -80,7 +80,7 @@ export const Home = ({ openContactModal }) => {
                     />
                   </div>
                   <p className="max-w-96 font-body font-semibold text-left text-white md:text-2xl text-sm">
-                    Near the Airport{/* Location name */}
+                   Sadahalli{/* Location name */}
                   </p>
                 </div>
               </div>
@@ -106,7 +106,7 @@ export const Home = ({ openContactModal }) => {
               className="h-3 md:h-6 text-black"
             />
             <p className="max-w-96 font-body text-left text-black md:text-2xl text-xs font-medium leading-[130%]">
-            Near the Airport{/* Location name */}
+            Sadahalli{/* Location name */}
             </p>
           </div>
         </div>
