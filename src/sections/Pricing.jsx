@@ -28,24 +28,24 @@ const Pricing = ({ openContactModal, formSubmitted }) => {
       price: "₹ 3.25 Cr ++", 
       size: "2,400 Sq.ft.", 
       image: bhk1,
-      leadSource: LEAD_SOURCES.PRICING_sqft2400, // or appropriate lead source
-      propertyType: PROPERTY_TYPES.sqft2400
+      leadSource: LEAD_SOURCES.PRICING_2BHK, // or appropriate lead source
+      propertyType: PROPERTY_TYPES.BHK2
     },
     { 
       type: "3 BHK", 
       price: "₹ 3.25 Cr ++", 
       size: "2,400 Sq.ft.", 
       image: bhk2,
-      leadSource: LEAD_SOURCES.PRICING_sqft2400, // or appropriate lead source
-      propertyType: PROPERTY_TYPES.sqft2400
+      leadSource: LEAD_SOURCES.PRICING_3BHK, // or appropriate lead source
+      propertyType: PROPERTY_TYPES.BHK3
     },
     { 
       type: "4 BHK", 
       price: "₹ 3.25 Cr ++", 
       size: "4,000 Sq.ft.", 
       image: bhk3,
-      leadSource: LEAD_SOURCES.PRICING_sqft4000, // or appropriate lead source
-      propertyType: PROPERTY_TYPES.sqft4000
+      leadSource: LEAD_SOURCES.PRICING_4BHK, // or appropriate lead source
+      propertyType: PROPERTY_TYPES.BHK4
     },
   ];
 
@@ -86,7 +86,8 @@ const Pricing = ({ openContactModal, formSubmitted }) => {
                 <Button
                   text="Get Pricing"
                   onClick={() => {
-                    trackButtonClick(property.leadSource, 'get_pricing', property.propertyType);
+                    
+                    trackButtonClick(property.leadSource, "get_pricing", property.propertyType);
                     openContactModal(property.leadSource, property.propertyType);
                   }}
                   className="absolute w-max top-1/2 right-0 transform -translate-y-1/2 px-6 py-3 text-center font-body font-semibold text-sm sm:text-base transition-all duration-300 ease-in-out"
