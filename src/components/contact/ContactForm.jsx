@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { FormAlert } from "./FormAlert";
 import ReactGA from "react-ga4"; // Google Analytics 4
 import { Phone, Xmark } from "iconoir-react"; // Icon library
@@ -21,10 +21,22 @@ const ContactForm = ({ contactmodal, setContactModal, leadSource }) => {
   const [number, setNumber] = useState("");
   const [alert, setAlert] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [utmParams, setUtmParams] = useState("");
+  const [utmParams, setUtmParams] = useState({});
+  const [isMobile, setIsMobile] = useState(false);
 
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  // ✅ validate form memoized state
+  const isFormValid = useMemo(() => {
+    if (!name || !number) return false;
 
+    const nameRegex = /^[A-Za-z ]+$/;
+    if (!nameRegex.test(name)) return false;
+
+    if (!isValidPhoneNumber(number)) return false;
+
+    return true;
+  }, [name, number]);
+
+  // ✅ safely check window resize after mount
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -37,18 +49,15 @@ const ContactForm = ({ contactmodal, setContactModal, leadSource }) => {
     };
   }, []);
 
+  // ✅ safely extract UTM params
   function getUTMParams() {
+    if (typeof window === "undefined") return {};
     const params = new URLSearchParams(window.location.search);
-    const source = params.get("utmSource");
-    const medium = params.get("utmMedium");
-    const campaign = params.get("utmCampaign");
-    const keyword = params.get("utmKeyword");
-
     return {
-      utmSource: source || "",
-      utmMedium: medium || "",
-      utmCampaign: campaign || "",
-      utmKeyword: keyword || "",
+      utmSource: params.get("utmSource") || "",
+      utmMedium: params.get("utmMedium") || "",
+      utmCampaign: params.get("utmCampaign") || "",
+      utmKeyword: params.get("utmKeyword") || "",
     };
   }
 
@@ -56,6 +65,7 @@ const ContactForm = ({ contactmodal, setContactModal, leadSource }) => {
     setUtmParams(getUTMParams());
   }, []);
 
+  // ✅ fixed validateForm
   const validateForm = () => {
     if (!name || !number) {
       setAlert(
@@ -91,11 +101,11 @@ const ContactForm = ({ contactmodal, setContactModal, leadSource }) => {
     return true;
   };
 
-const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (loading) return; // Avoid duplicate submission if already submitting
-    setLoading(true); // Set the loading state to true
+    if (loading) return;
+    setLoading(true);
 
     if (!validateForm()) {
       setLoading(false);
@@ -129,7 +139,7 @@ const handleSubmit = async (e) => {
 
     try {
       const response = await fetch(
-        "https://google-campaign-leads-service-dot-iqol-crm.uc.r.appspot.com/handleMultipleCampaignData",
+        "https://google-campaign-leads-service-dot-iqol-crm.appspot.com",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -137,8 +147,9 @@ const handleSubmit = async (e) => {
         }
       );
 
-      if (!response.ok)
+      if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
+      }
 
       const result = await response.json();
       console.log("Success:", result);
@@ -161,10 +172,9 @@ const handleSubmit = async (e) => {
         />
       );
     } finally {
-      setTimeout(() => setLoading(false), 1000); // Ensure loading is reset after a while
+      setTimeout(() => setLoading(false), 1000);
     }
-};
-
+  };
 
   return (
     <div>
@@ -220,9 +230,9 @@ const handleSubmit = async (e) => {
                 <button
                   onClick={handleSubmit}
                   className={`text-white my-5 p-2 w-full ${
-                    loading ? "bg-gray-400" : "bg-PrestigeBrown"
+                    loading || !isFormValid ? "bg-gray-400 cursor-not-allowed" : "bg-PrestigeBrown"
                   }`}
-                  disabled={loading}
+                  disabled={loading || !isFormValid}
                 >
                   {loading ? "Submitting..." : "Submit"}
                 </button>
@@ -238,7 +248,7 @@ const handleSubmit = async (e) => {
                 <button className="text-white my-5 p-2 w-full bg-PrestigeBrown flex items-center justify-center hover:bg-opacity-90 transition">
                   <a href="tel:+918919456501" className="flex items-center">
                     <Phone className="w-5 h-5 mr-2" />
-                   89194 56501
+                    89194 56501
                   </a>
                 </button>
               </div>
