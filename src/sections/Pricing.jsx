@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Button from "../components/button/buttonMain";
 import bhk1 from '../assets/gallery/interior1.jpg';
-import bhk2 from '../assets/gallery/4.webp';
+import bhk2 from '../assets/home/florr.png';
 import bhk3 from '../assets/gallery/30.jpg';
 import { useLeadTracking, LEAD_SOURCES, PROPERTY_TYPES } from '../hooks/useLeadTracking';
 
@@ -23,14 +23,14 @@ const Pricing = ({ openContactModal, formSubmitted }) => {
   };
 
   const propertyTypes = [
-     { 
-      type: "2 BHK", 
-      price: "₹ 3.25 Cr ++", 
-      size: "2,400 Sq.ft.", 
-      image: bhk1,
-      leadSource: LEAD_SOURCES.PRICING_sqft2400, // or appropriate lead source
-      propertyType: PROPERTY_TYPES.sqft2400
-    },
+    //  { 
+    //   type: "2 BHK", 
+    //   price: "₹ 3.25 Cr ++", 
+    //   size: "2,400 Sq.ft.", 
+    //   image: bhk1,
+    //   leadSource: LEAD_SOURCES.PRICING_sqft2400, // or appropriate lead source
+    //   propertyType: PROPERTY_TYPES.sqft2400
+    // },
     { 
       type: "3 BHK", 
       price: "₹ 3.25 Cr ++", 
@@ -39,14 +39,14 @@ const Pricing = ({ openContactModal, formSubmitted }) => {
       leadSource: LEAD_SOURCES.PRICING_sqft2400, // or appropriate lead source
       propertyType: PROPERTY_TYPES.sqft2400
     },
-    { 
-      type: "4 BHK", 
-      price: "₹ 3.25 Cr ++", 
-      size: "4,000 Sq.ft.", 
-      image: bhk3,
-      leadSource: LEAD_SOURCES.PRICING_sqft4000, // or appropriate lead source
-      propertyType: PROPERTY_TYPES.sqft4000
-    },
+    // { 
+    //   type: "4 BHK", 
+    //   price: "₹ 3.25 Cr ++", 
+    //   size: "4,000 Sq.ft.", 
+    //   image: bhk3,
+    //   leadSource: LEAD_SOURCES.PRICING_sqft4000, // or appropriate lead source
+    //   propertyType: PROPERTY_TYPES.sqft4000
+    // },
   ];
 
   return (
