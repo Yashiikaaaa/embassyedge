@@ -42,14 +42,14 @@ export const Location = () => {
             <Button 
               text="Open in Google Maps" // Button text
               className="whitespace-nowrap"  // Prevent text wrapping
-              onClick={() => window.open("https://maps.app.goo.gl/9LSXteeETc9rd9zB6", "_blank")} // Opens Google Maps link in a new tab
+              onClick={() => window.open("https://maps.app.goo.gl/QMbRAZAETzbs26ZC8", "_blank")} // Opens Google Maps link in a new tab
             />
           </div>
         </div>
               {/* Google Maps Iframe */}
         <div className="w-full flex justify-center">
           <div className="w-full max-w-4xl aspect-w-16 aspect-h-9 min-h-[60vh]">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1848.5679694317766!2d77.61511368853579!3d13.20844120803644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1fba2308f185%3A0xcf46a95c07d15b94!2sEmbassy%20Edge%40Embassy%20Springs!5e1!3m2!1sen!2sin!4v1755514544791!5m2!1sen!2sin"
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.166362459115!2d77.62156247508044!3d13.202617087134394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x69b16c77db038e7b%3A0x344c94f08e7119ec!2sEmbassy%20Greenshore!5e1!3m2!1sen!2sin!4v1777101603455!5m2!1sen!2sin" 
    className="w-full h-full"
               style={{ border: 0 }}
               allowFullScreen
