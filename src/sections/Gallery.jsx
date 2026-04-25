@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 // import pic1 from '../assets/gallery/image1.jpg'
 
-import pic3 from '../assets/gallery/embassy5.webp'
+import pic3 from '../assets/navbar/Central Park.jpg'
 import pic4 from '../assets/gallery/xyz1.jpg'
 // import pic5 from '../assets/gallery/image6.webp'
 import pic6 from '../assets/gallery/interior1.jpg'
 import pic9 from '../assets/gallery/31.jpg'
-import pic10 from '../assets/home/overviewembassy.png'
-import pic12 from '../assets/gallery/header-image.webp'
-import pic13 from '../assets/home/embassy-edge.jpg'
+import pic10 from '../icons/View from lake2.jpg'
+import pic12 from '../icons/View 2.jpg'
+import pic13 from '../icons/Top Shot.jpg'
 // import pic14 from '../assets/gallery/24.webp'
 // import pic15 from '../assets/gallery/25.webp'
 // import pic16 from '../assets/gallery/26.webp'
