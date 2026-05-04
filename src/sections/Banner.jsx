@@ -4,20 +4,20 @@ import { Phone, Xmark, MenuScale } from "iconoir-react"; // Importing icons for 
 import { Link } from "react-router-dom"; // Importing Link for routing
 
 // Banner component
-export const Banner = () => {
-  const [isBannerVisible, setIsBannerVisible] = useState(true);
+// export const Banner = () => {
+//   const [isBannerVisible, setIsBannerVisible] = useState(true);
 
-  return (
-    isBannerVisible && (
-      <div id="Banner" className="w-full bg-black text-white text-center p-2 flex justify-center items-center relative">
-        <span className="text-sm">🎉 Exclusive Pre-launch price and offers <a href="#" className="underline">Get it now →</a></span>
-        <button className="absolute right-4 text-white" onClick={() => setIsBannerVisible(false)}>
-          <Xmark className="w-5 h-5" />
-        </button>
-      </div>
-    )
-  );
-};
+//   return (
+//     isBannerVisible && (
+//       <div id="Banner" className="w-full bg-black text-white text-center p-2 flex justify-center items-center relative">
+//         <span className="text-sm">🎉 Exclusive Pre-launch price and offers <a href="#" className="underline">Get it now →</a></span>
+//         <button className="absolute right-4 text-white" onClick={() => setIsBannerVisible(false)}>
+//           <Xmark className="w-5 h-5" />
+//         </button>
+//       </div>
+//     )
+//   );
+// };
 
 // Navbar component
 export const Navbar = ({ sitevisitmodal, setSiteVisitModal }) => {
