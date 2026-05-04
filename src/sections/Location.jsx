@@ -32,6 +32,9 @@ export const Location = () => {
                 <li className=''>KIADB Aerospace & Hardware Park → 15 mins</li>
                 <li className=''>Hebbal / Mall of Asia → 25 mins</li>
                 <li className=''>Manyata Tech Park → 30 mins</li>
+                <li className=''>Amazon Office → 15 mins</li>
+                <li className=''>Prestige Tech Cloud → 5 mins</li>
+                
                 
                 {/* <li className=''>10 mins- Decathon Chandapura Market </li> */}
             </ol>
