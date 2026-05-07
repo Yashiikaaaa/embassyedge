@@ -112,10 +112,8 @@ export const Gallery = () => {
           (
             <Slider {...settings} key={tab.id}>
               {tab.photos.map((photo, index) => (
-                // eslint-disable-next-line react/jsx-key
-                <div className='w-fit'>
+                <div key={index} className='w-fit'>
                  <img
-                  key={index}
                   src={photo}
                   alt={`Photo ${index + 1}`}
                   style={{objectFit: 'cover' }}

@@ -7,7 +7,6 @@ import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import { isValidPhoneNumber } from "libphonenumber-js";
 import { useLeadTracking, LEAD_SOURCES } from "../../hooks/useLeadTracking";
-import { gcloudProject } from "firebase-functions/params";
 
 // GA4 Init
 const trackingId = import.meta.env.VITE_GA_MEASUREMENT_ID;
