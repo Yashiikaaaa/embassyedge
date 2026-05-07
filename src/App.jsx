@@ -6,7 +6,7 @@ const trackingId = import.meta.env.VITE_GA_MEASUREMENT_ID;
 
 function App() {
   useEffect(() => {
-    ReactGA.initialize(trackingId);
+    if (trackingId) ReactGA.initialize(trackingId);
   }, []);
 
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../assets/home/overviewembassy.png';
+import image from '../icons/View from lake2.jpg';
 import Button from '../components/button/buttonMain';
 import { useLeadTracking, LEAD_SOURCES } from '../hooks/useLeadTracking';
 
@@ -26,18 +26,18 @@ smarter, simpler, and beautifully.
           <br />
           
             <span>
-        <br />    <p>Surrounded by 288 acres
+        <br />    <span>Surrounded by 288 acres
 of thoughtfully planned spaces, this is a place where you
 can truly breathe, grow, and belong. Each home is
 designed for comfort — with wider windows, larger living
-areas, and smart, efficient spaces that feel just right.<p/>
+areas, and smart, efficient spaces that feel just right.</span>
             <br/>
-            <p>A community where friendships flourish, families thrive,
+            <span><br/>A community where friendships flourish, families thrive,
 and everyday moments feel special. Seamless
 connectivity and easy payment plans make it easier to
-step into the smart life you’ve been waiting for. </p></p>
+step into the smart life you’ve been waiting for. </span>
 
-            
+
 
 </span>
           </p>

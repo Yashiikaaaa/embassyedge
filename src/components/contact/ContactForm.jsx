@@ -27,6 +27,7 @@ const fireContactFormSubmitEvent = ({ projectName, leadSource, utmParams }) => {
     utm_medium: utmParams?.utmMedium || "",
     utm_campaign: utmParams?.utmCampaign || "",
     utm_keyword: utmParams?.utmKeyword || "",
+
   });
 };
 
@@ -63,6 +64,8 @@ const ContactForm = ({ contactmodal, setContactModal, leadSource }) => {
       utmMedium: params.get("utmMedium") || "",
       utmCampaign: params.get("utmCampaign") || "",
       utmKeyword: params.get("utmKeyword") || "",
+      gclid: params.get("gclid") || "",
+  
     };
   };
 
@@ -115,6 +118,8 @@ const ContactForm = ({ contactmodal, setContactModal, leadSource }) => {
         medium: utmParams.utmMedium || null,
         campaign: utmParams.utmCampaign || null,
         keyword: utmParams.utmKeyword || null,
+        gclid: utmParams.gclid || null,
+       
       },
     };
 
