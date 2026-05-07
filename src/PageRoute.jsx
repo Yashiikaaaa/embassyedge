@@ -79,6 +79,7 @@ export const PageRoute = () => {
     const medium = params.get("utmMedium");
     const campaign = params.get("utmCampaign");
     const keyword = params.get("utmKeyword");
+   
 
     ReactGA.send({
       hitType: "pageview",
@@ -86,6 +87,7 @@ export const PageRoute = () => {
       utmMedium: medium,
       utmCampaign: campaign,
       utmKeyowrd: keyword,
+     
     });
   }, []);
 
