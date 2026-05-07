@@ -17,6 +17,7 @@ export const useLeadTracking = () => {
       utm_campaign: params.get("utmCampaign") || undefined,
       utm_term: params.get("utmTerm") || undefined,
       utm_content: params.get("utmContent") || undefined,
+      gclid: params.get("gclid") || undefined,
 
     };
   };

@@ -35,18 +35,18 @@ const Pricing = ({ openContactModal, formSubmitted }) => {
       type: "3 BHK", 
       price: "₹ 3.25 Cr ++", 
       size: "2,400 Sq.ft.", 
-      image: bhk2,
+      image: bhk1,
       leadSource: LEAD_SOURCES.PRICING_3BHK, // or appropriate lead source
       propertyType: PROPERTY_TYPES.BHK3
     },
-    // { 
-    //   type: "4 BHK", 
-    //   price: "₹ 3.25 Cr ++", 
-    //   size: "4,000 Sq.ft.", 
-    //   image: bhk3,
-    //   leadSource: LEAD_SOURCES.PRICING_sqft4000, // or appropriate lead source
-    //   propertyType: PROPERTY_TYPES.sqft4000
-    // },
+    { 
+      type: "4 BHK", 
+      price: "₹ 3.25 Cr ++", 
+      size: "4,000 Sq.ft.", 
+      image: bhk3,
+      leadSource: LEAD_SOURCES.PRICING_sqft4000, // or appropriate lead source
+      propertyType: PROPERTY_TYPES.sqft4000
+    },
   ];
 
   return (

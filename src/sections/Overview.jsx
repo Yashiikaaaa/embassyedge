@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../assets/home/overviewembassy.png';
+import image from '../icons/View from lake2.jpg';
 import Button from '../components/button/buttonMain';
 import { useLeadTracking, LEAD_SOURCES } from '../hooks/useLeadTracking';
 
